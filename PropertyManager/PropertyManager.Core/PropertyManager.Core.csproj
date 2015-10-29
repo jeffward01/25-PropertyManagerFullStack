@@ -53,6 +53,9 @@
     <Compile Include="Domain\Property.cs" />
     <Compile Include="Domain\Tenant.cs" />
     <Compile Include="Infrastructure\PropertyManagerDbContext.cs" />
+    <Compile Include="Models\LeaseModel.cs" />
+    <Compile Include="Models\PropertyModel.cs" />
+    <Compile Include="Models\TenantModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

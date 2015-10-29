@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PropertyManager.Core.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,7 +21,18 @@ namespace PropertyManager.Core.Domain
         public virtual ICollection<Lease> Leases { get; set; }
 
 
+        public void Update(PropertyModel property)
+        {
+            Name = property.Name;
+            Address1 = property.Address1;
+            Address2 = property.Address2;
+            PropertyId = property.PropertyId;
+            City = property.City;
+            State = property.State;
+            Zip = property.Zip;
 
+            
+        }
 
     }
 }

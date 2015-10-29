@@ -26,3 +26,11 @@ C:\Users\jward01\Documents\Visual Studio 2015\Projects\PropertyManager\PropertyM
 C:\Users\jward01\Documents\Visual Studio 2015\Projects\PropertyManager\PropertyManager\PropertyManager\obj\Debug\PropertyManager.csprojResolveAssemblyReference.cache
 C:\Users\jward01\Documents\Visual Studio 2015\Projects\PropertyManager\PropertyManager\PropertyManager\obj\Debug\PropertyManager.dll
 C:\Users\jward01\Documents\Visual Studio 2015\Projects\PropertyManager\PropertyManager\PropertyManager\obj\Debug\PropertyManager.pdb
+C:\Users\jward01\Documents\Visual Studio 2015\Projects\PropertyManager\PropertyManager\PropertyManager\bin\AutoMapper.dll
+C:\Users\jward01\Documents\Visual Studio 2015\Projects\PropertyManager\PropertyManager\PropertyManager\bin\EntityFramework.dll
+C:\Users\jward01\Documents\Visual Studio 2015\Projects\PropertyManager\PropertyManager\PropertyManager\bin\EntityFramework.SqlServer.dll
+C:\Users\jward01\Documents\Visual Studio 2015\Projects\PropertyManager\PropertyManager\PropertyManager\bin\PropertyManager.Core.dll
+C:\Users\jward01\Documents\Visual Studio 2015\Projects\PropertyManager\PropertyManager\PropertyManager\bin\PropertyManager.Core.pdb
+C:\Users\jward01\Documents\Visual Studio 2015\Projects\PropertyManager\PropertyManager\PropertyManager\bin\AutoMapper.xml
+C:\Users\jward01\Documents\Visual Studio 2015\Projects\PropertyManager\PropertyManager\PropertyManager\bin\EntityFramework.xml
+C:\Users\jward01\Documents\Visual Studio 2015\Projects\PropertyManager\PropertyManager\PropertyManager\bin\EntityFramework.SqlServer.xml

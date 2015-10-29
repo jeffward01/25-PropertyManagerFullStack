@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PropertyManager.Models
+namespace PropertyManager.Core.Models
 {
-    class LeaseModel
+    public class LeaseModel
     {
         public int LeaseId { get; set; }
 
