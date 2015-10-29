@@ -19,13 +19,13 @@ namespace PropertyManager.Controllers
     {
         private PropertyManagerDbContext db = new PropertyManagerDbContext();
 
-        // GET: api/Properties
+        // GET: api/Properties  || Controller Method [0]
         public IEnumerable<PropertyModel> GetProperties()
         {
             return Mapper.Map<IEnumerable<PropertyModel>>(db.Properties);
         }
 
-        // GET: api/Properties/5
+        // GET: api/Properties/5 || Controller Method [1]
         [ResponseType(typeof(PropertyModel))]
         public IHttpActionResult GetProperty(int id)
         {
@@ -43,7 +43,7 @@ namespace PropertyManager.Controllers
             return Ok(property);
         }
 
-        // PUT: api/Properties/5
+        // PUT: api/Properties/5 || Controller Method [2]
         [ResponseType(typeof(void))]
         public IHttpActionResult PutProperty(int id, PropertyModel property)
         {
@@ -82,7 +82,7 @@ namespace PropertyManager.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/Properties
+        // POST: api/Properties || Controller Method [3]
         [ResponseType(typeof(PropertyModel))]
         public IHttpActionResult PostProperty(PropertyModel property)
         {
@@ -102,7 +102,7 @@ namespace PropertyManager.Controllers
             return CreatedAtRoute("DefaultApi", new { id = property.PropertyId }, property);
         }
 
-        // DELETE: api/Properties/5
+        // DELETE: api/Properties/5 || Controller Method [4]
         [ResponseType(typeof(PropertyModel))]
         public IHttpActionResult DeleteProperty(int id)
         {

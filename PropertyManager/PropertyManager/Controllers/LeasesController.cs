@@ -10,6 +10,8 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using PropertyManager.Core.Domain;
 using PropertyManager.Core.Infrastructure;
+using AutoMapper;
+using PropertyManager.Core.Models;
 
 namespace PropertyManager.Controllers
 {
@@ -18,27 +20,30 @@ namespace PropertyManager.Controllers
         private PropertyManagerDbContext db = new PropertyManagerDbContext();
 
         // GET: api/Leases
-        public IQueryable<Lease> GetLeases()
+        public IEnumerable<LeaseModel> GetLeases()
         {
-            return db.Leases;
+            return Mapper.Map<IEnumerable<LeaseModel>>(db.Properties); 
         }
 
         // GET: api/Leases/5
-        [ResponseType(typeof(Lease))]
+        [ResponseType(typeof(LeaseModel))]
         public IHttpActionResult GetLease(int id)
         {
-            Lease lease = db.Leases.Find(id);
-            if (lease == null)
+            Lease dbLease = db.Leases.Find(id);
+
+            if (dbLease == null)
             {
                 return NotFound();
             }
+
+            LeaseModel lease = Mapper.Map<LeaseModel>(dbLease);
 
             return Ok(lease);
         }
 
         // PUT: api/Leases/5
         [ResponseType(typeof(void))]
-        public IHttpActionResult PutLease(int id, Lease lease)
+        public IHttpActionResult PutLease(int id, LeaseModel lease)
         {
             if (!ModelState.IsValid)
             {
@@ -72,8 +77,8 @@ namespace PropertyManager.Controllers
         }
 
         // POST: api/Leases
-        [ResponseType(typeof(Lease))]
-        public IHttpActionResult PostLease(Lease lease)
+        [ResponseType(typeof(LeaseModel))]
+        public IHttpActionResult PostLease(LeaseModel lease)
         {
             if (!ModelState.IsValid)
             {
@@ -87,7 +92,7 @@ namespace PropertyManager.Controllers
         }
 
         // DELETE: api/Leases/5
-        [ResponseType(typeof(Lease))]
+        [ResponseType(typeof(LeaseModel))]
         public IHttpActionResult DeleteLease(int id)
         {
             Lease lease = db.Leases.Find(id);

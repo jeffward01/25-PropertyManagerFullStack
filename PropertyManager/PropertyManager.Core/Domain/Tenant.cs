@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PropertyManager.Core.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,7 +18,16 @@ namespace PropertyManager.Core.Domain
 
         public virtual ICollection<Lease> Leases { get; set; }
 
+        public void Update(TenantModel tenant)
+        {
+            FirstName = tenant.FirstName;
+            LastName = tenant.LastName;
+            TenantId = tenant.TenantId;
+            Telephone = tenant.Telephone;
+            EmailAddress = tenant.EmailAddress;
+          
 
+        }
 
     }
 }

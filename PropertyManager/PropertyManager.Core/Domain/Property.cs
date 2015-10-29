@@ -29,9 +29,7 @@ namespace PropertyManager.Core.Domain
             PropertyId = property.PropertyId;
             City = property.City;
             State = property.State;
-            Zip = property.Zip;
-
-            
+            Zip = property.Zip;         
         }
 
     }

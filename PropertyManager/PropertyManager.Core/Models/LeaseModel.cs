@@ -16,5 +16,8 @@ namespace PropertyManager.Core.Models
         public DateTime StartDate { get; set; }
         public Nullable<DateTime> EndDate { get; set; }
 
+        public decimal Rent { get; set; }
+
+
     }
 }

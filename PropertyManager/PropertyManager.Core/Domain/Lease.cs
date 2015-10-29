@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PropertyManager.Core.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,5 +21,19 @@ namespace PropertyManager.Core.Domain
 
         public virtual Property Property { get; set; }
         public virtual Tenant Tenant { get; set; }
+
+
+
+        public void Update(LeaseModel lease)
+        {
+            LeaseId = lease.LeaseId;
+            PropertyId = lease.PropertyId;
+            TenantId = lease.TenantId;
+            StartDate = lease.StartDate;
+            EndDate = lease.EndDate;
+            Rent = lease.Rent;
+        
+        }
+
     }
 }
