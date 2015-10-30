@@ -26,7 +26,6 @@ namespace PropertyManager.Core.Domain
             Telephone = tenant.Telephone;
             EmailAddress = tenant.EmailAddress;
           
-
         }
 
     }

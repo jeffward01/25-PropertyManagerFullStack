@@ -19,13 +19,13 @@ namespace PropertyManager.Controllers
     {
         private PropertyManagerDbContext db = new PropertyManagerDbContext();
 
-        // GET: api/Leases
+        // GET: api/Leases || Controller Method[0]
         public IEnumerable<LeaseModel> GetLeases()
         {
             return Mapper.Map<IEnumerable<LeaseModel>>(db.Properties); 
         }
 
-        // GET: api/Leases/5
+        // GET: api/Leases/5 || Controller Method [1]
         [ResponseType(typeof(LeaseModel))]
         public IHttpActionResult GetLease(int id)
         {
@@ -41,7 +41,7 @@ namespace PropertyManager.Controllers
             return Ok(lease);
         }
 
-        // PUT: api/Leases/5
+        // PUT: api/Leases/5 || Controller Method[2]
         [ResponseType(typeof(void))]
         public IHttpActionResult PutLease(int id, LeaseModel lease)
         {
@@ -54,6 +54,10 @@ namespace PropertyManager.Controllers
             {
                 return BadRequest();
             }
+
+            var dbLease = db.Leases.Find(id);
+
+            dbLease.Update(lease);
 
             db.Entry(lease).State = EntityState.Modified;
 
@@ -76,7 +80,7 @@ namespace PropertyManager.Controllers
             return StatusCode(HttpStatusCode.NoContent);
         }
 
-        // POST: api/Leases
+        // POST: api/Leases || Controller Method [3]
         [ResponseType(typeof(LeaseModel))]
         public IHttpActionResult PostLease(LeaseModel lease)
         {
@@ -85,13 +89,18 @@ namespace PropertyManager.Controllers
                 return BadRequest(ModelState);
             }
 
-            db.Leases.Add(lease);
+            var dbLease = new Lease();
+
+            dbLease.Update(lease);
+            db.Leases.Add(dbLease);
             db.SaveChanges();
+
+            lease.LeaseId = dbLease.LeaseId;
 
             return CreatedAtRoute("DefaultApi", new { id = lease.LeaseId }, lease);
         }
 
-        // DELETE: api/Leases/5
+        // DELETE: api/Leases/5 || Controller Method [4]
         [ResponseType(typeof(LeaseModel))]
         public IHttpActionResult DeleteLease(int id)
         {
@@ -104,7 +113,7 @@ namespace PropertyManager.Controllers
             db.Leases.Remove(lease);
             db.SaveChanges();
 
-            return Ok(lease);
+            return Ok(Mapper.Map<LeaseModel>(lease));
         }
 
         protected override void Dispose(bool disposing)
