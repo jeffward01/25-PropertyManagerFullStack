@@ -58,8 +58,8 @@ namespace PropertyManager.Controllers
             var dbTentant = db.Tenants.Find(id);
 
             dbTentant.Update(tenant);
-            
-           // db.Entry(tenant).State = EntityState.Modified;
+
+            db.Entry(dbTentant).State = EntityState.Modified;
 
             try
             {
