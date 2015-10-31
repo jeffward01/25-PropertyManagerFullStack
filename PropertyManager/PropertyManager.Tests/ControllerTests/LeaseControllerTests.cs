@@ -41,11 +41,11 @@ namespace PropertyManager.Tests.ControllerTests
 
             //Assert
             //If action returns: NotFound()
-            Assert.IsNotInstanceOfType(result, typeof(NotFoundResult));
+            Assert.IsInstanceOfType(result, typeof(OkNegotiatedContentResult<LeaseModel>));
 
             //if Acction returns: Ok();
-            Assert.IsInstanceOfType(result, typeof(OkNegotiatedContentResult<PropertyModel>));
-
+            OkNegotiatedContentResult<LeaseModel> contentReesult = (OkNegotiatedContentResult<LeaseModel>)result;
+            Assert.IsTrue(contentReesult.Content.LeaseId == 1);
         }
 
         [TestMethod] // [2] Update Lease
@@ -56,8 +56,11 @@ namespace PropertyManager.Tests.ControllerTests
 
             var newLease = new LeaseModel
             {
+                PropertyId = 1,
+                TenantId = 1,
                 StartDate = DateTime.Now,
                 Rent = 2000
+
             };
 
             //The result of the PostRequest
@@ -87,6 +90,8 @@ namespace PropertyManager.Tests.ControllerTests
 
             var newLease = new LeaseModel
             {
+                PropertyId = 1,
+                TenantId = 1,
                 StartDate = DateTime.Now,
                 Rent = 2000
             };
@@ -112,7 +117,10 @@ namespace PropertyManager.Tests.ControllerTests
 
             var newLease = new LeaseModel
             {
-                StartDate = DateTime.Now,
+
+            PropertyId = 1,
+            TenantId = 1,
+            StartDate = DateTime.Now,
                 Rent = 2000
             };
 
@@ -135,7 +143,7 @@ namespace PropertyManager.Tests.ControllerTests
             //Assert
 
             //If action returns not found
-            Assert.IsNotInstanceOfType(result, typeof(NotFoundResult));
+           Assert.IsNotInstanceOfType(result, typeof(NotFoundResult));
 
             //If action retruns OK()
             Assert.IsInstanceOfType(result, typeof(OkNegotiatedContentResult<LeaseModel>));

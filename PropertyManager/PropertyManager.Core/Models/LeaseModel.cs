@@ -20,4 +20,6 @@ namespace PropertyManager.Core.Models
 
 
     }
+
+
 }

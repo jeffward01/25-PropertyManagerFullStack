@@ -19,6 +19,7 @@ namespace PropertyManager.Core.Infrastructure
         public IDbSet<Property> Properties { get; set; }
         public IDbSet<Tenant> Tenants { get; set; }
         public IDbSet<Lease> Leases { get; set; }
+        //Possibly add img here later
 
 
         //Code First Fluid API
@@ -26,13 +27,17 @@ namespace PropertyManager.Core.Infrastructure
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Property>().HasKey(p => p.PropertyId);
-            modelBuilder.Entity<Property>().HasMany(p => p.Leases).WithRequired(l => l.Property).HasForeignKey(l => l.PropertyId);
+            modelBuilder.Entity<Property>().HasMany(p => p.Leases)
+                .WithRequired(l => l.Property)
+                .HasForeignKey(l => l.PropertyId);
 
             modelBuilder.Entity<Tenant>().HasKey(t => t.TenantId);
-            modelBuilder.Entity<Tenant>().HasMany(l => l.Leases).WithRequired(l => l.Tenant).HasForeignKey(l => l.TenantId);
+            modelBuilder.Entity<Tenant>().HasMany(l => l.Leases)
+                .WithRequired(l => l.Tenant)
+                .HasForeignKey(l => l.TenantId);
 
             modelBuilder.Entity<Lease>().HasKey(l => l.LeaseId);
-
+         
             base.OnModelCreating(modelBuilder);
         }
     }

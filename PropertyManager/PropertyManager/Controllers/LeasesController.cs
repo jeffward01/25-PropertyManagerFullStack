@@ -22,7 +22,7 @@ namespace PropertyManager.Controllers
         // GET: api/Leases || Controller Method[0]
         public IEnumerable<LeaseModel> GetLeases()
         {
-            return Mapper.Map<IEnumerable<LeaseModel>>(db.Properties); 
+            return Mapper.Map<IEnumerable<LeaseModel>>(db.Leases); 
         }
 
         // GET: api/Leases/5 || Controller Method [1]
@@ -59,7 +59,7 @@ namespace PropertyManager.Controllers
 
             dbLease.Update(lease);
 
-           // db.Entry(lease).State = EntityState.Modified;
+           db.Entry(lease).State = EntityState.Modified;
 
             try
             {

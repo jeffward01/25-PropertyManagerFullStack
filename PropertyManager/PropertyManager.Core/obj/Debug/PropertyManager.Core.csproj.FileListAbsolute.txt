@@ -5,6 +5,5 @@ C:\Users\jward01\Documents\Visual Studio 2015\Projects\PropertyManager\PropertyM
 C:\Users\jward01\Documents\Visual Studio 2015\Projects\PropertyManager\PropertyManager\PropertyManager.Core\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\jward01\Documents\Visual Studio 2015\Projects\PropertyManager\PropertyManager\PropertyManager.Core\bin\Debug\EntityFramework.xml
 C:\Users\jward01\Documents\Visual Studio 2015\Projects\PropertyManager\PropertyManager\PropertyManager.Core\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\jward01\Documents\Visual Studio 2015\Projects\PropertyManager\PropertyManager\PropertyManager.Core\obj\Debug\PropertyManager.Core.csprojResolveAssemblyReference.cache
 C:\Users\jward01\Documents\Visual Studio 2015\Projects\PropertyManager\PropertyManager\PropertyManager.Core\obj\Debug\PropertyManager.Core.dll
 C:\Users\jward01\Documents\Visual Studio 2015\Projects\PropertyManager\PropertyManager\PropertyManager.Core\obj\Debug\PropertyManager.Core.pdb

@@ -43,13 +43,15 @@ namespace PropertyManager.Tests.ControllerTests
             Assert.IsNotInstanceOfType(result, typeof(NotFoundResult));
 
             //if Acction returns: Ok();
-            Assert.IsInstanceOfType(result, typeof(OkNegotiatedContentResult<PropertyModel>));
+            Assert.IsInstanceOfType(result, typeof(OkNegotiatedContentResult<TenantModel>));
 
         }
 
         [TestMethod] // [2] Update Tenant
         public void PutTenantUpdatesTenant()
         {
+           
+           
             //Arrange
             var tCtrl = new TenantsController();
 
@@ -138,7 +140,7 @@ namespace PropertyManager.Tests.ControllerTests
             Assert.IsNotInstanceOfType(result, typeof(NotFoundResult));
 
             //If action retruns OK()
-            Assert.IsInstanceOfType(result, typeof(OkNegotiatedContentResult<PropertyModel>));
+            Assert.IsInstanceOfType(result, typeof(OkNegotiatedContentResult<TenantModel>));
 
 
         }

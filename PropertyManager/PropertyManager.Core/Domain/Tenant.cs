@@ -22,7 +22,6 @@ namespace PropertyManager.Core.Domain
         {
             FirstName = tenant.FirstName;
             LastName = tenant.LastName;
-            TenantId = tenant.TenantId;
             Telephone = tenant.Telephone;
             EmailAddress = tenant.EmailAddress;
           

@@ -26,7 +26,6 @@ namespace PropertyManager.Core.Domain
             Name = property.Name;
             Address1 = property.Address1;
             Address2 = property.Address2;
-            PropertyId = property.PropertyId;
             City = property.City;
             State = property.State;
             Zip = property.Zip;         

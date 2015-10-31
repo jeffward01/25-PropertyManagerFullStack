@@ -61,6 +61,7 @@ namespace PropertyManager.Controllers
 
             dbProperty.Update(property);
 
+            // db.Entry(tenant).State = EntityState.Modified;
 
             try
             {

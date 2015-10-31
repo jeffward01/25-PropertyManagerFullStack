@@ -22,7 +22,7 @@ namespace PropertyManager.Controllers
         // GET: api/Tenants || Controller Method [0]
         public IEnumerable<TenantModel> GetTenants()
         {
-            return Mapper.Map<IEnumerable<TenantModel>>(db.Properties);
+            return Mapper.Map<IEnumerable<TenantModel>>(db.Tenants);
         }
 
         // GET: api/Tenants/5 || Controller Method [1]

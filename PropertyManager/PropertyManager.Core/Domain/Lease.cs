@@ -27,7 +27,7 @@ namespace PropertyManager.Core.Domain
 
         public void Update(LeaseModel lease)
         {
-            LeaseId = lease.LeaseId;
+           
             PropertyId = lease.PropertyId;
             TenantId = lease.TenantId;
             StartDate = lease.StartDate;
