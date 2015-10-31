@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace PropertyManager
 {
@@ -13,6 +14,8 @@ namespace PropertyManager
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
+        //    var corsAttr = new EnableCorsAttribute("http://example.com", "/API/", "Properties");
+       //     config.EnableCors(corsAttr);
 
             // Web API routes
             config.MapHttpAttributeRoutes();
@@ -27,7 +30,7 @@ namespace PropertyManager
         }
 
         //Initilize AutoMapper
-        private static void SetupAutoMapper()
+        public static void SetupAutoMapper()
         {
             Mapper.CreateMap<Property, PropertyModel>();
             Mapper.CreateMap<Tenant, TenantModel>();

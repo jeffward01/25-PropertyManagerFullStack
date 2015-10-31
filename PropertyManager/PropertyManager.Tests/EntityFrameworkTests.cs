@@ -8,14 +8,18 @@ namespace PropertyManager.Tests
     [TestClass]
     public class EntityFrameworkTests
     {
+
+        /// <summary>
+        ///// /
+
         [TestMethod]
         public void GenerateDatabaseText()
         {
-            using (var db = new PropertyManagerDbContext())
+            // using (var db = new PropertyManagerDbContext())
             {
-                var firstProperty = db.Properties.FirstOrDefault();
+                //   var firstProperty = db.Properties.FirstOrDefault();
 
-                Assert.IsNull(firstProperty);
+                // Assert.IsNull(firstProperty);
             }
         }
     }

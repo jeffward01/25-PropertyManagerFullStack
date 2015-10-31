@@ -81,7 +81,7 @@ namespace PropertyManager.Controllers
         }
 
         // POST: api/Tenants || Controller Method [3]
-        [ResponseType(typeof(TenantModel)]
+        [ResponseType(typeof(TenantModel))]
         public IHttpActionResult PostTenant(TenantModel tenant)
         {
             if (!ModelState.IsValid)
