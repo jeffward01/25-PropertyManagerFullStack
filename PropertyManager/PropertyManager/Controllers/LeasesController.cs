@@ -59,7 +59,7 @@ namespace PropertyManager.Controllers
 
             dbLease.Update(lease);
 
-           db.Entry(lease).State = EntityState.Modified;
+         //  db.Entry(lease).State = EntityState.Modified;
 
             try
             {
