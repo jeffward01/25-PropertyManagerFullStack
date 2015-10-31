@@ -73,7 +73,7 @@ namespace PropertyManager.Tests.ControllerTests
             //Cast result as the content result so I can gather information from Content Result
             CreatedAtRouteNegotiatedContentResult<PropertyModel> contentResult = (CreatedAtRouteNegotiatedContentResult<PropertyModel>)result;
 
-            //REsult containts the customer I had just created
+            //REsult containts the property I had just created
             result = propertiesController.GetProperty(contentResult.Content.PropertyId);
 
             //GET PropertyModel from Result
