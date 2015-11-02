@@ -17,13 +17,17 @@
     <link rel="stylesheet" type="text/css" href="Wolf-Theme/css/vendor/morris.css" />
     <link rel="stylesheet" type="text/css" href="bower_components/jquery-ui/jquery-ui.min.js" />
     <link rel="stylesheet" type="text/css" href="bower_components/toastr/toastr.min.css" />
-    <link rel="stylesheet" type="text/css" href="bower_components/angular-material/angular-material.min.css" />s
+    <link rel="stylesheet" type="text/css" href="bower_components/angular-material/angular-material.min.css" />
+    <link rel="stylesheet" type="text/css" href="bower_components/angular-loading-bar/src/loading-bar.css" />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
 
 </head>
 <body id="dashboard">
+
     <div id="wrapper">
+        <!--Main Sidebar-->
         <div id="sidebar-default" class="main-sidebar">
+            <!--Main Sidebar || Current User || Top Right --> 
             <div class="current-user">
                 <a href="index.html" class="name">
                     <i class="ion-android-social-user"></i>
@@ -52,6 +56,8 @@
                     </li>
                 </ul>
             </div>
+
+            <!--Menu Section of Sidebar-->
             <div class="menu-section">
                 <h3>General</h3>
                 <ul>
@@ -63,30 +69,31 @@
                     </li>
                     <li>
                         <a href="Wolf-Theme/users.html" data-toggle="sidebar">
-                            <i class="ion-home"></i> <span>Properties</span>                          
-                        </a>             
+                            <i class="ion-home"></i> <span>Properties</span>
+                        </a>
                     </li>
                     <li>
                         <a href="Wolf-Theme/users.html" data-toggle="sidebar">
                             <i class="ion-ios7-people"></i> <span>Tenants</span>
-                        </a>                     
+                        </a>
                     </li>
                     <li>
                         <a href="Wolf-Theme/users.html" data-toggle="sidebar">
                             <i class="ion-key"></i> <span>Leases</span>
-                          
+
                         </a>
-                    
+
                     </li>
                 </ul>
             </div>
-           
+
+            <!--Main Sidebar || Bottom Menu || Start-->
             <div class="bottom-menu hidden-sm">
                 <ul>
                     <li><a href="#"><i class="ion-help"></i></a></li>
                     <li>
                         <a href="#">
-                            <i class="ion-help-buoy"></i>                       
+                            <i class="ion-help-buoy"></i>
                         </a>
                         <ul class="menu">
                             <li><a href="#"><a href="mailto:jeff@jeffwarddevelopment.com">Email Support</a></a></li>
@@ -96,31 +103,58 @@
                 </ul>
             </div>
         </div>
+        <!--^^ End Sidebar ^^-->
 
+
+        <!--Main Content || Area -->
         <div id="content">
+
+            <!--Main Content || Horzontal-Top Menu Bar -->
             <div class="menubar">
                 <div class="sidebar-toggler visible-xs">
                     <i class="ion-navicon"></i>
                 </div>
+                <!-- Horzontal-Top Menu Bar || Header.title -->
                 <div class="page-title">
                     <div class="titleText">
                         <h1> <i class="ion-cloud">Property Management Portal</i></h1>
                     </div>
-                </div>   
+                </div>
             </div>
-
+            <!--Main Content || Content -->
             <div class="content-wrapper">
-            
 
-               
 
-                
 
-             
+
+
+
+
             </div>
         </div>
     </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--Skin Switcher -->
     <div class="skin-switcher">
         <div class="toggler">
             <span class="brankic-brush"></span>
@@ -168,9 +202,7 @@
 
 
 
-
-    
-    <!-- javascript -->
+    <!-- Javascript Scrtipts || Begin  -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="Wolf-Theme/js/vendor/jquery.cookie.js"></script>
@@ -193,13 +225,16 @@
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+    <script src="bower_components/angular-loading-bar/src/loading-bar.js"></script>
     <script src="bower_components/angular-aria/angular-aria.min.js"></script>
     <script src="bower_components/angular-animate/angular-animate.min.js"></script>
     <script src="bower_components/angular-material/angular-material.min.js"></script>
+    <script src="Scripts/angular.min.js"></script> 
     
-    
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <!-- App Scripts  -->
+    <script src="js/app.js"></script>
+
+
 
 
 </body>
