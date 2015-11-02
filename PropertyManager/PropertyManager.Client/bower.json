@@ -1,0 +1,38 @@
+{
+  "name": "PropertyManagerApp",
+  "homepage": "''",
+  "authors": [
+    "jeffward01 <jeffwardcoding@gmail.com>"
+  ],
+  "description": "A property management app",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.7",
+    "angular-ui": "~0.4.0",
+    "bootstrap": "~3.3.5",
+    "angular-ui-router": "~0.2.15",
+    "moment": "~2.10.6",
+    "bootstrap-datepicker": "~1.5.0",
+    "raphael": "~2.1.4",
+    "morris.js": "morrisjs#~0.5.1",
+    "Flot": "flot#~0.8.3",
+    "metisMenu": "~2.2.0",
+    "angular-resource": "~1.4.7",
+    "animateCSS": "~1.2.1",
+    "angular-morris-chart": "~1.1.0",
+    "toastr": "~2.1.2",
+    "jquery-ui": "jqueryui#~1.11.4",
+    "angular-material": "~0.11.4",
+    "angular-animate": "~1.4.7"
+  }
+}
