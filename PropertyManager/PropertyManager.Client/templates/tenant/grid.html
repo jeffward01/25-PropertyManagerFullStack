@@ -27,11 +27,11 @@
                 <td>{{tenant.Telephone}}</td>
                 <td>{{tenant.EmailAddress}}</td>
                 <td>
-                    <a class="btn btn-info btn-xs" ui-sref="tenants.detail({ id: tenant.TenantId })">
+                    <a class="btn btn-info btn-xs" ui-sref="tenant.detail({ id: tenant.TenantId })">
                         <i class="fa fa-edit fa-fw"></i>
                     </a>
                     <a class="btn btn-danger btn-xs" ng-click="deleteTenant(tenant)">
-                        <i class="fa fa-remove fa-fw"></i>
+                        <i class="fa fa-times fa-fw"></i>
                     </a>
                 </td>
             </tr>
