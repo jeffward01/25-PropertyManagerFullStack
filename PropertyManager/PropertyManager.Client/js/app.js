@@ -23,4 +23,4 @@
 });
 
 
-angular.module('app').value('apiUrl', 'http://localhost:49803/api/');
+angular.module('app').value('apiUrl', 'http://localhost:59964/api/');
