@@ -7,15 +7,18 @@
     }
 
     $scope.saveProperty = function () {
-        if ($scope.property.PropertyId) {
-            $scope.property.$update(function () {
-                $state.go('property.grid');
-            });
-        } else {
-            $scope.property.$save(function () {
-                $state.go('property.grid');
-            });
-        }
-    }
 
+        var successfulCallback = function () {
+            $state.go('properties.grid');
+        }
+
+
+        if ($scope.property.PropertyId) {
+            $scope.property.$update(successfulCallback);
+            
+        } else {
+            $scope.property.$save(successfulCallback);
+        };
+    }
 });
+

@@ -1,9 +1,9 @@
-﻿angular.module('app', ['ui.router', 'ngResource']).config(function ($stateProvider, $urlRouterProvider) {
+﻿angular.module('app', ['ui.router', 'ngResource', 'ngRoute']).config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/dashboard');
 
     $stateProvider
         //If state == dashboard
-        .state('dashboard', { url: '/dashboard', templateUrl: '/templates/dashboard/dashboard.html' })
+      //  .state('dashboard', { url: '/dashboard', templateUrl: '/templates/dashboard/dashboard.html' })
 
 
        //If state == property
@@ -18,8 +18,8 @@
 
        //If state == lease
         .state('lease', { abstract: true, url: '/lease', template: '<ui-view />' })
-            .state('tenant.grid', { url: '/grid', templateUrl: '/templates/lease/grid.html', controller: 'LeaseGridController' })
-            .state('tenant.detail', { url: '/detail/:id', templateUrl: '/templates/lease/detail.html', controller: 'LeaseDetailController' })
+            .state('lease.grid', { url: '/grid', templateUrl: '/templates/lease/grid.html', controller: 'LeaseGridController' })
+            .state('lease.detail', { url: '/detail/:id', templateUrl: '/templates/lease/detail.html', controller: 'LeaseDetailController' })
 });
 
 

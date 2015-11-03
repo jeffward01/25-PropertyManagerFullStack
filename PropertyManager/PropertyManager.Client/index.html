@@ -1,9 +1,9 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en" ng-app="app">
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Wolf - Bootstrap Admin Theme</title>
+    <title>Commodore Property Manager</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- stylesheets -->
@@ -15,14 +15,13 @@
     <link rel="stylesheet" type="text/css" href="Wolf-Theme/css/vendor/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="Wolf-Theme/css/vendor/datepicker.css" />
     <link rel="stylesheet" type="text/css" href="Wolf-Theme/css/vendor/morris.css" />
-    <link rel="stylesheet" type="text/css" href="bower_components/jquery-ui/jquery-ui.min.js" />
     <link rel="stylesheet" type="text/css" href="bower_components/toastr/toastr.min.css" />
     <link rel="stylesheet" type="text/css" href="bower_components/angular-material/angular-material.min.css" />
     <link rel="stylesheet" type="text/css" href="bower_components/angular-loading-bar/src/loading-bar.css" />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
 
 </head>
-<body id="dashboard">
+<body id="dashboard" ng-controller="SiteController">
 
     <div id="wrapper">
         <!--Main Sidebar-->
@@ -68,17 +67,17 @@
                         </a>
                     </li>
                     <li>
-                        <a href="Wolf-Theme/users.html" data-toggle="sidebar">
+                        <a ui-sref="property.grid"  data-toggle="sidebar">
                             <i class="ion-home"></i> <span>Properties</span>
                         </a>
                     </li>
                     <li>
-                        <a href="Wolf-Theme/users.html" data-toggle="sidebar">
+                        <a ui-sref="tenant.grid"  data-toggle="sidebar">
                             <i class="ion-ios7-people"></i> <span>Tenants</span>
                         </a>
                     </li>
                     <li>
-                        <a href="Wolf-Theme/users.html" data-toggle="sidebar">
+                        <a ui-sref="lease.grid"  data-toggle="sidebar">
                             <i class="ion-key"></i> <span>Leases</span>
 
                         </a>
@@ -123,7 +122,9 @@
             </div>
             <!--Main Content || Content -->
             <div class="content-wrapper">
-
+                <div class="container-fluid" style="padding-top: 24px;">
+                    <div ui-view></div>
+                </div>
 
 
 
@@ -222,17 +223,24 @@
     <script src="bower_components/toastr/toastr.min.js"></script>
 
     <!-- Angular Links -->
-    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.js"></script>
+    <!--<script src="bower_components/angular/angular.min.js"></script>-->
     <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
-    <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+    <!--<script src="bower_components/angular-resource/angular-resource.min.js"></script>-->
     <script src="bower_components/angular-loading-bar/src/loading-bar.js"></script>
     <script src="bower_components/angular-aria/angular-aria.min.js"></script>
     <script src="bower_components/angular-animate/angular-animate.min.js"></script>
     <script src="bower_components/angular-material/angular-material.min.js"></script>
-    <script src="Scripts/angular.min.js"></script> 
     
+
+
+
     <!-- App Scripts  -->
     <script src="js/app.js"></script>
+    <script src="js/SiteController.ctrl.js"></script>
 
     <!-- Property Scripts  -->
     <script src="js/property/detail/property.detail.ctrl.js"></script>
@@ -248,6 +256,8 @@
     <script src="js/tenant/tenant.resource.js"></script>
     <script src="js/tenant/grid/tenant.grid.ctrl.js"></script>
     <script src="js/tenant/detail/tenant.detail.ctrl.js"></script>
+
+
 
 </body>
 </html>
