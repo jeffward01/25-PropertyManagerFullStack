@@ -12,14 +12,24 @@
                             ng-model="lease.PropertyId"></select>
                 </div><!-- end form group -->
             </div><!-- end column -->
-            <div class="col-sm-6">
+            <div class="col-sm-3">
                 <div class="form-group">
-                    <label class="control-label" for="leaseTenant">Tenant Name</label>
+                    <label class="control-label" for="leaseTenant">Tenant First Name</label>
                     <select id="leaseTenant" class="form-control"
-                            ng-options="tenant.TenantId as tenant.FullName for tenant in tenants"
+                            ng-options="tenant.TenantId as tenant.FirstName for tenant in tenants"
                             ng-model="lease.TenantId"></select>
                 </div><!-- end form group -->
             </div><!-- end column -->
+
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <label class="control-label" for="leaseTenant">Tenant Last Name</label>
+                    <select id="leaseTenant" class="form-control"
+                            ng-options="tenant.TenantId as tenant.LastName for tenant in tenants"
+                            ng-model="lease.TenantId"></select>
+                </div><!-- end form group -->
+            </div><!-- end column -->
+
         </div><!-- end row -->
 
         <div class="row">

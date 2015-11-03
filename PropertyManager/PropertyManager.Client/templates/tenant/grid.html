@@ -24,7 +24,7 @@
             <tr ng-repeat="tenant in tenants">
                 <td>{{tenant.FirstName}}</td>
                 <td>{{tenant.LastName}}</td>
-                <td>{{tenant.Telephone}}</td>
+                <td ng-bind="tenant.Telephone | tel"></td>
                 <td>{{tenant.EmailAddress}}</td>
                 <td>
                     <a class="btn btn-info btn-xs" ui-sref="tenant.detail({ id: tenant.TenantId })">
