@@ -1,4 +1,6 @@
-﻿<div class="container">
+﻿
+<div class="container">
+
     <h4>
         {{lease.LeaseId ? 'Edit' : 'Add'}} Lease
     </h4>
@@ -7,26 +9,26 @@
             <div class="col-sm-6">
                 <div class="form-group">
                     <label class="control-label" for="leaseProperty">Property Name</label>
-                    <select id="leaseProperty" class="form-control"
+                    <input id="leaseProperty" class="form-control" placeholder="Property Name"
                             ng-options="property.PropertyId as property.Name for property in properties"
-                            ng-model="lease.PropertyId"></select>
+                            ng-model="lease.PropertyId">
                 </div><!-- end form group -->
             </div><!-- end column -->
             <div class="col-sm-3">
                 <div class="form-group">
                     <label class="control-label" for="leaseTenant">Tenant First Name</label>
-                    <select id="leaseTenant" class="form-control"
+                    <input id="leaseTenant" class="form-control" placeholder="First Name"
                             ng-options="tenant.TenantId as tenant.FirstName for tenant in tenants"
-                            ng-model="lease.TenantId"></select>
+                            ng-model="lease.TenantId">
                 </div><!-- end form group -->
             </div><!-- end column -->
 
             <div class="col-sm-3">
                 <div class="form-group">
                     <label class="control-label" for="leaseTenant">Tenant Last Name</label>
-                    <select id="leaseTenant" class="form-control"
+                    <input id="leaseTenant" class="form-control" placeholder="Last Name"
                             ng-options="tenant.TenantId as tenant.LastName for tenant in tenants"
-                            ng-model="lease.TenantId"></select>
+                            ng-model="lease.TenantId">
                 </div><!-- end form group -->
             </div><!-- end column -->
 
