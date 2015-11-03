@@ -1,0 +1,38 @@
+﻿<div class="panel panel-primary">
+    <div class="panel-heading"> {{property.PropertyId ? 'Edit' : 'Add'}} Property</div>
+    <div class="panel-body">
+        <div class="form-group">
+            <label class="control-label" for="propertyName">Property Name</label>
+            <input type="text" class="form-control" id="propertyName" placeholder="Property Name" ng-model="property.Name" />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="propertyAddress1">Address 1</label>
+            <input type="text" class="form-control" id="propertyAddress1" placeholder="Address 1" ng-model="property.Address1" />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="propertyAddress2">Address 2</label>
+            <input type="text" class="form-control" id="propertyAddress2" placeholder="Address 2" ng-model="property.Address2" />
+        </div>
+
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label class="control-label" for="propertyCity">City</label>
+                    <input type="text" class="form-control" id="propertyCity" placeholder="City" ng-model="property.City" />
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label class="control-label" for="propertyState">State</label>
+                    <input type="text" class="form-control" id="propertyState" placeholder="State" ng-model="property.State" />
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label class="control-label" for="propertyZip">Zip</label>
+                    <input type="text" class="form-control" id="propertyZip" placeholder="Zip" ng-model="property.Zip" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
