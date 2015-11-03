@@ -14,5 +14,8 @@ namespace PropertyManager.Core.Models
         public string LastName { get; set; }
         public string Telephone { get; set; }
         public string EmailAddress { get; set; }
+
+        public PropertyModel Property { get; set; }
+        public LeaseModel Lease { get; set; }
     }
 }

@@ -18,7 +18,8 @@ namespace PropertyManager.Core.Models
 
         public decimal Rent { get; set; }
 
-
+        public TenantModel Tenant { get; set; }
+        public PropertyModel Property { get; set; }
     }
 
 

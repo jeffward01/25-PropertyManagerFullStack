@@ -17,5 +17,8 @@ namespace PropertyManager.Core.Models
         public string State { get; set; }
         public string Zip { get; set; }
 
+
+        public TenantModel Tenant { get; set; }
+        public LeaseModel Lease { get; set; }
     }
 }
