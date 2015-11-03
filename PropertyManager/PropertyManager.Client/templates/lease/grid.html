@@ -1,10 +1,48 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-	<meta charset="utf-8" />
-</head>
-<body>
+﻿<div class="container">
+    <h4 class="clearfix">
+        <i class="fa fa-key"></i> All Leases
+        <button class="btn btn-success btn-sm pull-right" ui-sref="lease.detail">
+            <i class="fa fa-plus"></i>Add Lease
+        </button>
+    </h4>
 
-</body>
-</html>
+    <div class="alert alert-warning" ng-hide="leases.length">
+        <strong>Oops! </strong> There are no leases - please add a lease
+    </div>
+
+    <table class="table table-bordered table-condensed table-responsive" ng-show="leases.length">
+        <thead>
+            <tr>
+                <th>Tenant Name</th>
+                <th>Property Name</th>
+                <th>Property Address</th>
+                <th>Property City</th>
+                <th>Property State</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Rent</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="lease in leases">
+                <td>{{lease.Tenant.FirstName}} {{lease.Tenant.LastName}}</td>
+                <td>{{lease.Property.Name}}</td>
+                <td>{{lease.Property.Address1}}</td>
+                <td>{{lease.Property.City}}</td>
+                <td>{{lease.Property.State}}</td>
+                <td>{{lease.StartDate | date: 'mediumDate'}}</td>
+                <td>{{lease.EndDate | date: 'mediumDate'}}</td>
+                <td>{{lease.Rent | currency }}</td>
+                <td>
+                    <a class="btn btn-info btn-xs" ui-sref="leases.detail({ id: lease.LeaseId })">
+                        <i class="fa fa-edit fa-fw"></i>
+                    </a>
+                    <a class="btn btn-danger btn-xs" ng-click="deleteLease(lease)">
+                        <i class="fa fa-remove fa-fw"></i>
+                    </a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div><!-- end container-->

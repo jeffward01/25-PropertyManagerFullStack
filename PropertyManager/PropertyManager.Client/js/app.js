@@ -13,8 +13,8 @@
 
        //If state == tenants
          .state('tenant', { abstract: true, url: '/tenant', template: '<ui-view />' })
-            .state('tenant.grid', { url: '/grid', templateUrl: '/templates/tenant/grid.html', controller: 'TentantGridController' })
-            .state('tenant.detail', { url: '/detail/:id', templateUrl: '/templates/tenant/detail.html', controller: 'TentantDetailController' })
+            .state('tenant.grid', { url: '/grid', templateUrl: '/templates/tenant/grid.html', controller: 'TenantGridController' })
+            .state('tenant.detail', { url: '/detail/:id', templateUrl: '/templates/tenant/detail.html', controller: 'TenantDetailController' })
 
        //If state == lease
         .state('lease', { abstract: true, url: '/lease', template: '<ui-view />' })
