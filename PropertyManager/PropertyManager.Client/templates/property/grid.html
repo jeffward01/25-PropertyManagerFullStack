@@ -27,8 +27,8 @@
                     <td>{{property.City}}</td>
                     <td>{{property.State}}</td>
                     <td>{{property.Zip}}</td>
-                    <td><button class="btn btn-xs btn-info" ui-sref="property.detail({id:PropertyId})"><i class="fa fa-edit"></i></button>
-                    <button class="btn btn-xs btn-danger" ng-click="deleteProperty(property)"></button><i class="fa fa-remove"></i></td>
+                    <td><a class="btn btn-xs btn-info" ui-sref="property.detail({id:PropertyId})"><i class="fa fa-edit fa-fw"></i></a>
+                        <a class="btn btn-xs btn-danger" ng-click="deleteProperty(property)"><i class="fa fa-times fa-fw"></i></a></td>
                 </tr>
             </tbody>
         </table>
