@@ -1,4 +1,4 @@
-angular.module('app').factory('authService', function ($http, $q, $state, localStorageService, apiUtl){
+angular.module('app').factory('authService', function ($http, $q, $state, localStorageService, apiUrl){
     
     var authServiceFactory = {};
     
@@ -10,7 +10,7 @@ angular.module('app').factory('authService', function ($http, $q, $state, localS
     var _saveRegistration = function (registration) {
         _logOut();
         
-        return $http.post(apiUtl + 'api/account/register', registration).then(function (response){
+        return $http.post(apiUrl + '/account/register', registration).then(function (response){
             return response;
         });
     };
@@ -20,7 +20,7 @@ angular.module('app').factory('authService', function ($http, $q, $state, localS
         
         var deferred = $q.defer();
         
-        $http.post(apiUtl + 'token', data, {headers: { 'Content-Type': 'application/x-www-form-urlencoded'}}).success(function(response){
+        $http.post(apiUrl + 'token', data, {headers: { 'Content-Type': 'application/x-www-form-urlencoded'}}).success(function(response){
             localStorageService.set('authorizationData', {token: response.access_token, username: loginData.username});
             
             _authentication.isAuth = true;
