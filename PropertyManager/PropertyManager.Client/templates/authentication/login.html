@@ -1,14 +1,22 @@
 <div class="container">
-<form class="form-signin">
-    <h2 class="form-signin-heading">Please sign in</h2>
-    
-    <label for="inputEmail" class="sr-only">Username</label>
-    <input type="text" id="inputEmail" class="form-control" placeholder="Email address" autofocus ng-model="loginData.username"/>
-    
-    <label for="inputPassword" class="sr-only">Password</label>
-    <input type="password" id="inputPassword" class="form-control" placeholder="Password" ng-model="loginData.password"/>
-    
-    <button class="btn btn-lg btn=primary btn-block" ng-click="login()">Sign in</button>
-    
+    <form class="form-signin">
+
+        <div class="page-header">
+            <h1>Please sign in</h1>
+        </div>
+        <div class="mainLoginContainer">
+            <label for="inputEmail" class="sr-only">Username</label>
+            <input type="text" id="inputEmail" class="form-control" placeholder="Email address or username" autofocus ng-model="loginData.username" />
+
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" id="inputPassword" class="form-control" placeholder="Password" ng-model="loginData.password" />
+            <div class="buttonContainer">
+                <button class="btn btn-lg btn-success btn-block" ng-click="login()">Sign in</button>
+            </div>
+
+        </div>
+        <div class="createAccount">
+          <button class="btn btn-lg btn-warning btn-block" ui-sref="register" ng-click="CreateAccount()">Click here to create an account</button>
+        </div>
     </form>
 </div>

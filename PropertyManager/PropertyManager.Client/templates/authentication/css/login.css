@@ -1,0 +1,31 @@
+.mainLoginContainer {
+    margin: 0 auto;
+    width: 30%;
+    padding-top: 74px;
+}
+
+.buttonContainer {
+    padding-top: 20px;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.createAccount {
+    text-align: right;
+    padding-top: 25px;
+    font-weight: bold;
+    color: darkblue;
+    width: 300px;
+    float: right;
+    margin-right: 100px;
+}
+
+.createAccount:hover {
+    color: coral;
+}
+
+.iconCloud {
+    font-size: 150px;
+    margin-bottom: -50px;
+}
+

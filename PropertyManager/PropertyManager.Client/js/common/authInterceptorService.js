@@ -6,9 +6,9 @@ angular.module('app').factory('authInterceptorService', function($q, $location, 
     var _request = function(config) {
         config.headers = config.headers || {};
         
-        var authData = localStorageService.get('authorization');
+        var authData = localStorageService.get('authorizationData');
         if(authData){
-            config.headers.Authorization = 'Bearer' + authData.token;
+            config.headers.Authorization = 'Bearer ' + authData.token;
         }
             return config;
     }

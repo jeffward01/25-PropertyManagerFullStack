@@ -1,4 +1,5 @@
 ﻿using Microsoft.Owin;
+using Microsoft.Owin.Cors;
 using Microsoft.Owin.Security.OAuth;
 using Owin;
 using PropertyManager.Providers;
@@ -19,6 +20,7 @@ namespace PropertyManager
 
             HttpConfiguration config = new HttpConfiguration();
             WebApiConfig.Register(config);
+            app.UseCors(CorsOptions.AllowAll);
             app.UseWebApi(config);
         }
 

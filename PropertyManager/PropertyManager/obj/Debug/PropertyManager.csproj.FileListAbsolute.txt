@@ -56,3 +56,5 @@ C:\Users\jward01\Documents\Visual Studio 2015\Projects\PropertyManager\PropertyM
 C:\Users\jward01\Documents\Visual Studio 2015\Projects\PropertyManager\PropertyManager\PropertyManager\bin\Microsoft.Owin.Security.Cookies.xml
 C:\Users\jward01\Documents\Visual Studio 2015\Projects\PropertyManager\PropertyManager\PropertyManager\bin\Microsoft.Owin.Security.OAuth.xml
 C:\Users\jward01\Documents\Visual Studio 2015\Projects\PropertyManager\PropertyManager\PropertyManager\bin\System.Web.Http.Owin.xml
+C:\Users\jward01\Documents\Visual Studio 2015\Projects\PropertyManager\PropertyManager\PropertyManager\bin\Microsoft.Owin.Cors.dll
+C:\Users\jward01\Documents\Visual Studio 2015\Projects\PropertyManager\PropertyManager\PropertyManager\bin\Microsoft.Owin.Cors.xml

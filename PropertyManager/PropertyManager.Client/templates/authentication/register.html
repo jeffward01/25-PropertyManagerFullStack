@@ -1,17 +1,9 @@
-<div class="container">
+<div class="container registerCon">
     <div id="signup" class="clear">
 
-        <div class="signup-switcher">
-            <a href="#" class="active" data-class="clear">
-                <i class="fa fa-check"></i> Clear
-            </a>
-            <a href="#" data-class="">
-                <i class="fa fa-check"></i> Dark
-            </a>
-        </div>
 
         <a href="index.html" class="logo">
-            <i class="brankic-pen"></i>
+            <h1 class="iconCloud"><i class="ion ion-cloud"></i></h1>
         </a>
 
         <h3>Create Your Account Now</h3>
@@ -23,18 +15,18 @@
                 </div>
                 <div class="form-group">
                     <label for="inputUsername">Enter Username</label>
-                    <input class="form-control" id="inputUsername" type="text" placeholder="Your Username" />
+                    <input class="form-control" id="inputUsername" type="text" ng-model="userData.username" placeholder="Your Username" />
                 </div>
                 <div class="form-group">
                     <label for="inputPassword">Enter Password</label>
-                    <input class="form-control" id="inputPassword" type="password" placeholder="Password" />
+                    <input class="form-control" id="inputPassword" type="password" ng-model="userData.password" placeholder="Password" />
                 </div>
                 <div class="form-group">
                     <label for="inputConfirmPassword">Enter Confirm Password</label>
-                    <input class="form-control" type="password" id="inputConfirmPassword" placeholder="Confirm password" />
+                    <input class="form-control" type="password" id="inputConfirmPassword" ng-model="userData.confirmPassword" placeholder="Confirm password" />
                 </div>
                 <div class="signup">
-                    <a href="index.html" class="btn btn-success btn-lg">Create my account</a>
+                    <a ng-click="registerAccount()" class="btn btn-success btn-lg">Create my account</a>
                 </div>
             </form>
         </div>
@@ -42,20 +34,9 @@
         <div class="bottom-wrapper">
             <div class="message">
                 <span>Already have an account?</span>
-                <a ui-sref="login">Sign in here</a>.
+                <button class="btn btn-warning btn-lg" ng-click="go2login()">Sign in here</button>
             </div>
         </div>
 
-        <script type="text/javascript">
-            $(function () {
-                var $switcher = $(".signup-switcher a");
-                $switcher.click(function (e) {
-                    e.preventDefault();
-                    $switcher.removeClass("active");
-                    $(this).addClass("active");
-                    $("body").attr("class", $(this).data("class"));
-                });
-            });
-        </script>
     </div>
 </div>

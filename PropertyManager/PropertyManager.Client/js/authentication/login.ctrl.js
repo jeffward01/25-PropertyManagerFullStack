@@ -19,4 +19,8 @@ angular.module('app').controller('LoginController', function($scope, $state, aut
         
         });
     }; 
+    
+    $scope.CreateAccount = function(){
+        $state.go('register');
+    }
 });
