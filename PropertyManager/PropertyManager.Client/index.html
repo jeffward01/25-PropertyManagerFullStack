@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" ng-app="app">
 <head>
     <meta charset="UTF-8" />
@@ -240,22 +240,38 @@
 
     <!-- App Scripts  -->
     <script src="js/app.js"></script>
-    <script src="js/SiteController.ctrl.js"></script>
-
+    
+    <!-- Site Contorller -->
+    <script src="js/app/SiteController.ctrl.js"></script>
+    
+    <!-- App Controller -->
+    <script src="js/app/app.ctrl.js"></script>
+    
+    <!--Dashboard Controller -->
+    <script src="js/app/dashboard/dashboard.ctrl.js"></script>
+    
+    <!-- Authtication -->
+    <script src="js/authentication/login.ctrl.js"></script>
+    <script src="js/authentication/register.ctrl.js"></script>
+    
+    <!-- Common -->
+    <script src="js/common/authInterceptorService.js"></script>
+    <script src="js/common/authService.js"></script>
+    
     <!-- Property Scripts  -->
-    <script src="js/property/detail/property.detail.ctrl.js"></script>
-    <script src="js/property/grid/property.grid.ctrl.js"></script>
-    <script src="js/property/property.resource.js"></script>
+    <script src="js/app/property/detail/property.detail.ctrl.js"></script>
+    <script src="js/app/property/grid/property.grid.ctrl.js"></script>
+    <script src="js/app/property/property.resource.js"></script>
 
     <!-- Lease Scripts  -->
     <script src="js/lease/detail/lease.detail.ctrl.js"></script>
     <script src="js/lease/grid/lease.grid.ctrl.js"></script>
-    <script src="js/lease/lease.resource.js"></script>
+    <script src="js/app/lease/lease.resource.js"></script>
 
     <!-- Tenant Scripts  -->
-    <script src="js/tenant/tenant.resource.js"></script>
-    <script src="js/tenant/grid/tenant.grid.ctrl.js"></script>
-    <script src="js/tenant/detail/tenant.detail.ctrl.js"></script>
+    <script src="js/app/tenant/tenant.resource.js"></script>
+    <script src="js/app/tenant/grid/tenant.grid.ctrl.js"></script>
+    <script src="js/app/tenant/detail/tenant.detail.ctrl.js"></script>
 
 
 

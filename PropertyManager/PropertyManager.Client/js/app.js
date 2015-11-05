@@ -1,30 +1,35 @@
-﻿angular.module('app', ['ui.router', 'ngResource', 'ngRoute', 'angular-loading-bar']).config(function ($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise('/dashboard');
+angular.module('app', ['ui.router', 'ngResource', 'ngRoute', 'angular-loading-bar', 'LocalStorageModule']).config(function ($stateProvider, $httpProvider, $urlRouterProvider) {
+    $httpProvider.interceptors.push('authInterceptorService');
+    
+    $urlRouterProvider.otherwise('/login');
 
     $stateProvider
-        //If state == dashboard
-      //  .state('dashboard', { url: '/dashboard', templateUrl: '/templates/dashboard/dashboard.html' })
-
-
+        .state('login', {url:'/login', templateUrl: '/templates/authentication/login.html', controller: 'LoginController'})
+        .state('register', {url : '/register', templateUrl: '/templates/authentication/register.html', controller: 'RegisterController'})
+        
+        .state('app', {url: '/login', templateUrl: '/templates/app/app.html', authenticate: true, controllerL 'AppController'})
+            .state('app.dashboard', {url: '/dashboard', templateUrl: '/templates/app/dashboard/dashboard.html', authenticate: true})
+    
        //If state == property
-        .state('property', { abstract: true, url: '/property', template: '<ui-view />' })
-            .state('property.grid', { url: '/grid', templateUrl: '/templates/property/grid.html', controller: 'PropertyGridController' })
-            .state('property.detail', { url: '/detail/:id', templateUrl: '/templates/property/detail.html', controller: 'PropertyDetailController' })
+        .state('app.property', { abstract: true, url: '/property', template: '<ui-view />' })
+            .state('app.property.grid', { url: '/grid', templateUrl: '/templates/app/property/grid.html', controller: 'PropertyGridController' })
+            .state('app.property.detail', { url: '/detail/:id', templateUrl: '/templates/app/property/detail.html', controller: 'PropertyDetailController' })
 
        //If state == tenants
-         .state('tenant', { abstract: true, url: '/tenant', template: '<ui-view />' })
-            .state('tenant.grid', { url: '/grid', templateUrl: '/templates/tenant/grid.html', controller: 'TenantGridController' })
-            .state('tenant.detail', { url: '/detail/:id', templateUrl: '/templates/tenant/detail.html', controller: 'TenantDetailController' })
+         .state('app.tenant', { abstract: true, url: '/tenant', template: '<ui-view />' })
+            .state('app.tenant.grid', { url: '/grid', templateUrl: '/templates/app/tenant/grid.html', controller: 'TenantGridController' })
+            .state('app.tenant.detail', { url: '/detail/:id', templateUrl: '/templates/app/tenant/detail.html', controller: 'TenantDetailController' })
 
        //If state == lease
-        .state('lease', { abstract: true, url: '/lease', template: '<ui-view />' })
-            .state('lease.grid', { url: '/grid', templateUrl: '/templates/lease/grid.html', controller: 'LeaseGridController' })
-            .state('lease.detail', { url: '/detail/:id', templateUrl: '/templates/lease/detail.html', controller: 'LeaseDetailController' })
+        .state('app.lease', { abstract: true, url: '/lease', template: '<ui-view />' })
+            .state('app.lease.grid', { url: '/grid', templateUrl: '/templates/app/lease/grid.html', controller: 'LeaseGridController' })
+            .state('app.lease.detail', { url: '/detail/:id', templateUrl: '/templates/app/lease/detail.html', controller: 'LeaseDetailController' })
 });
 
-
+//Web Server Address
 angular.module('app').value('apiUrl', 'http://localhost:59964/api/');
 
+//Telephone Filter Code
 angular.module('ng').filter('tel', function () {
     return function (tel) {
         if (!tel) { return ''; }
