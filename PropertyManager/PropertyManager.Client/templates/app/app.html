@@ -1,0 +1,107 @@
+<div id="wrapper">
+        <!--Main Sidebar-->
+        <div id="sidebar-default" class="main-sidebar">
+            <!--Main Sidebar || Current User || Top Right --> 
+            <div class="current-user">
+                <a href="index.html" class="name">
+                    <i class="ion-android-social-user"></i>
+
+                    <!--<img class="avatar" src="images/avatars/1.jpg" />-->
+                    <span>
+                        John Smith
+                        <i class="fa fa-chevron-down"></i>
+                    </span>
+                </a>
+                <ul class="menu">
+                    <li>
+                        <a href="Wolf-Theme/account-profile.html">Account settings</a>
+                    </li>
+                    <li>
+                        <a href="Wolf-Theme/account-billing.html">Billing</a>
+                    </li>
+                    <li>
+                        <a href="Wolf-Theme/account-notifications.html">Notifications</a>
+                    </li>
+                    <li>
+                        <a href="Wolf-Theme/account-support.html">Help / Support</a>
+                    </li>
+                    <li>
+                        <a href="Wolf-Theme/signup.html">Sign out</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!--Menu Section of Sidebar-->
+            <div class="menu-section">
+                <h3>General</h3>
+                <ul>
+                    <li>
+                        <a href="index.html" class="active">
+                            <i class="ion-android-earth"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a ui-sref="property.grid"  data-toggle="sidebar">
+                            <i class="ion-home"></i> <span>Properties</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a ui-sref="tenant.grid"  data-toggle="sidebar">
+                            <i class="ion-ios7-people"></i> <span>Tenants</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a ui-sref="lease.grid"  data-toggle="sidebar">
+                            <i class="ion-key"></i> <span>Leases</span>
+
+                        </a>
+
+                    </li>
+                </ul>
+            </div>
+
+            <!--Main Sidebar || Bottom Menu || Start-->
+            <div class="bottom-menu hidden-sm">
+                <ul>
+                    <li><a href="#"><i class="ion-help"></i></a></li>
+                    <li>
+                        <a href="#">
+                            <i class="ion-help-buoy"></i>
+                        </a>
+                        <ul class="menu">
+                            <li><a href="#"><a href="mailto:jeff@jeffwarddevelopment.com">Email Support</a></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="signup.html"><i class="ion-log-out"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <!--^^ End Sidebar ^^-->
+
+
+        <!--Main Content || Area -->
+        <div id="content">
+
+            <!--Main Content || Horzontal-Top Menu Bar -->
+            <div class="menubar">
+                <div class="sidebar-toggler visible-xs">
+                    <i class="ion-navicon"></i>
+                </div>
+                <!-- Horzontal-Top Menu Bar || Header.title -->
+                <div class="page-title">
+                    <div class="titleText">
+                        <h1> <i class="ion-cloud">Property Management Portal</i></h1>
+                    </div>
+                </div>
+            </div>
+            <!--Main Content || Content -->
+            <div class="content-wrapper">
+                <div class="container-fluid" style="padding-top: 24px;">
+                    <div ui-view></div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>

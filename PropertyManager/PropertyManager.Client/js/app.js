@@ -7,7 +7,7 @@ angular.module('app', ['ui.router', 'ngResource', 'ngRoute', 'angular-loading-ba
         .state('login', {url:'/login', templateUrl: '/templates/authentication/login.html', controller: 'LoginController'})
         .state('register', {url : '/register', templateUrl: '/templates/authentication/register.html', controller: 'RegisterController'})
         
-        .state('app', {url: '/login', templateUrl: '/templates/app/app.html', authenticate: true, controller: 'AppController'})
+        .state('app', {url: '/app', templateUrl: '/templates/app/app.html', authenticate: true, controller: 'AppController'})
             .state('app.dashboard', {url: '/dashboard', templateUrl: '/templates/app/dashboard/dashboard.html', authenticate: true})
     
        //If state == property
@@ -28,6 +28,8 @@ angular.module('app', ['ui.router', 'ngResource', 'ngRoute', 'angular-loading-ba
 
 //Web Server Address
 angular.module('app').value('apiUrl', 'http://localhost:59964/api/');
+
+angular.module('app').value('serviceUrl', 'http://localhost:59964/');
 
 //Run block
 angular.module('app').run(function ($rootScope, authService, $state){

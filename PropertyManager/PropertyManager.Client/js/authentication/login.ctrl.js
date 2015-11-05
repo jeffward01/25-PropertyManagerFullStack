@@ -10,7 +10,7 @@ angular.module('app').controller('LoginController', function($scope, $state, aut
     $scope.login = function(){
         
         authService.login($scope.loginData).then(function(response){
-            $state.gp('app.dashboard');
+            $state.go('app.dashboard');
         },
             function(err){
             if(err){

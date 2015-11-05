@@ -1,5 +1,5 @@
 'use strict';
-angular.module('app').factory('authInterceptorSercice', function($q, $location, localStorageService) {
+angular.module('app').factory('authInterceptorService', function($q, $location, localStorageService) {
     
     var authInterceptorServiceFactory = {};
     
