@@ -11,13 +11,10 @@
 }
 
 .createAccount {
-    text-align: right;
-    padding-top: 25px;
-    font-weight: bold;
-    color: darkblue;
-    width: 300px;
-    float: right;
-    margin-right: 100px;
+    
+
+  
+  
 }
 
 .createAccount:hover {
@@ -37,3 +34,39 @@
     max-width: 100%;
     overflow-x: hidden;
 }
+
+/*Effects*/s
+.svg{
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    position: absolute;
+    z-index: -1;
+}
+
+.form-signin{
+    margin-top: -400px;
+    position: fixed; 
+    padding-left: 350px;
+}
+.mainLoginContainer{
+position: inherit;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
