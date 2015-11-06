@@ -29,12 +29,11 @@
     margin-bottom: -50px;
 }
 
-
-.dateRow{
+.dateRow {
     padding-top: 50px;
 }
 
-.lease-detail-container{
+.lease-detail-container, .tenant-detail {
     max-width: 100%;
     overflow-x: hidden;
 }

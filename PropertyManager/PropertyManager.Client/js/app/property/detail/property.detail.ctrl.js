@@ -16,7 +16,6 @@ angular.module('app').controller('PropertyDetailController', function ($scope, $
         }
 
 
-
         //Success Callback and Change of state
         var successfulCallback = function () {
             $state.go('app.property.grid');
