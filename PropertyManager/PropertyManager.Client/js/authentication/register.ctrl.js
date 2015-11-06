@@ -14,23 +14,22 @@ angular.module('app').controller('RegisterController', function ($scope, $state,
         }
         //if passwords are not the same
         var password1 = $('#inputPassword').val();
-        var password2 = $('#inputConfirmPassword').val();   
-        if(!(password1 == password2)) {
+        var password2 = $('#inputConfirmPassword').val();
+        if (!(password1 == password2)) {
             $('#inputPassword').val("");
-            $('#inputConfirmPassword').val("");      
+            $('#inputConfirmPassword').val("");
             alert("Your passwords must match, please confirm and try again.");
-            
-            return;
-           
-        }
 
+            return;
+        }
+        //Saves user registration to the DOM
         authService.saveRegistration($scope.userData).then(function (response) {
                 alert("Your login information has beens saved");
                 $state.go('login');
             },
             function (err) {
                 if (err) {
-                    alert(err.error_description);
+                    console.log(err);
                 }
             })
     }
