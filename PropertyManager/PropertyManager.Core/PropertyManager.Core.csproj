@@ -89,6 +89,7 @@
     <Compile Include="Domain\Property.cs" />
     <Compile Include="Domain\Tenant.cs" />
     <Compile Include="Infrastructure\AuthRepository.cs" />
+    <Compile Include="Models\DashboardModel.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="PropertyManagerDbContext.cs" />
     <Compile Include="Models\LeaseModel.cs" />
