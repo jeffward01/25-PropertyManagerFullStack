@@ -1,8 +1,8 @@
-﻿    <div class="panel panel-primary viewPort">
+    <div class="panel panel-primary viewPort">
         <div class="panel heading panel-heading clearfix">
             <i class="fa fa-key"></i> All Leases
          
-            <button class="btn btn-success btn-sm pull-right" ui-sref="lease.detail">
+            <button class="btn btn-success btn-sm pull-right" ui-sref="app.lease.detail">
                 <i class="fa fa-plus"></i>Add Lease
             </button>
         </div>
@@ -37,7 +37,7 @@
                         <td>{{lease.EndDate | date: 'mediumDate'}}</td>
                         <td>{{lease.Rent | currency }}</td>
                         <td>
-                            <a class="btn btn-info btn-xs" ui-sref="lease.detail({ id: lease.LeaseId })">
+                            <a class="btn btn-info btn-xs" ui-sref="app.lease.detail({ id: lease.LeaseId })">
                                 <i class="fa fa-edit fa-fw"></i>
                             </a>
                             <a class="btn btn-danger btn-xs" ng-click="deleteLease(lease)">

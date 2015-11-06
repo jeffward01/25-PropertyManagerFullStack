@@ -1,4 +1,4 @@
-﻿angular.module('app').controller('PropertyDetailController', function ($scope, $stateParams, Property, $state) {
+angular.module('app').controller('PropertyDetailController', function ($scope, $stateParams, Property, $state) {
 
     if ($stateParams.id) {
         $scope.property = Property.get({ id: $stateParams.id });
@@ -9,7 +9,7 @@
     $scope.saveProperty = function () {
 
         var successfulCallback = function () {
-            $state.go('properties.grid');
+            $state.go('app.property.grid');
         }
 
 

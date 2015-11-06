@@ -92,6 +92,11 @@ namespace PropertyManager.Controllers
 
             var dbTenant = new Tenant();
 
+            //Update Tenant in DB
+            dbTenant.Update(tenant);
+
+
+
             db.Tenants.Add(dbTenant);
             db.SaveChanges();
 

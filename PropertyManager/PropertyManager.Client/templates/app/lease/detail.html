@@ -1,6 +1,5 @@
-﻿
-<div class="container">
 
+<div class="container">
     <h4>
         {{lease.LeaseId ? 'Edit' : 'Add'}} Lease
     </h4>
@@ -9,43 +8,37 @@
             <div class="col-sm-6">
                 <div class="form-group">
                     <label class="control-label" for="leaseProperty">Property Name</label>
-                    <input id="leaseProperty" class="form-control" placeholder="Property Name"
+                    <select id="leaseProperty" class="form-control" placeholder="Property Name"
                             ng-options="property.PropertyId as property.Name for property in properties"
-                            ng-model="lease.PropertyId">
+                            ng-model="lease.PropertyId"></select>
                 </div><!-- end form group -->
             </div><!-- end column -->
             <div class="col-sm-3">
                 <div class="form-group">
                     <label class="control-label" for="leaseTenant">Tenant First Name</label>
-                    <input id="leaseTenant" class="form-control" placeholder="First Name"
+                    <select id="leaseTenant" class="form-control" placeholder="First Name"
                             ng-options="tenant.TenantId as tenant.FirstName for tenant in tenants"
-                            ng-model="lease.TenantId">
+                            ng-model="lease.TenantId"></select>
                 </div><!-- end form group -->
             </div><!-- end column -->
 
-            <div class="col-sm-3">
-                <div class="form-group">
-                    <label class="control-label" for="leaseTenant">Tenant Last Name</label>
-                    <input id="leaseTenant" class="form-control" placeholder="Last Name"
-                            ng-options="tenant.TenantId as tenant.LastName for tenant in tenants"
-                            ng-model="lease.TenantId">
-                </div><!-- end form group -->
-            </div><!-- end column -->
+       
 
         </div><!-- end row -->
 
-        <div class="row">
+        <div class="row dateRow">            
+            
             <div class="col-md-6">
                 <div class="form-group">
                     <label class="control-label" for="leaseStartDate">Lease Start Date</label>
-                    <input type="text" class="form-control" id="leaseStartDate"
+                    <input  data-provide="datepicker" type="text" class="form-control" id="leaseStartDate"
                            placeholder="Lease Start Date" ng-model="lease.StartDate">
                 </div><!-- end form group -->
             </div><!-- end column -->
             <div class="col-md-6">
                 <div class="form-group">
                     <label class="control-label" for="leaseEndDate">Lease End Date</label>
-                    <input type="text" class="form-control" id="leaseEndDate"
+                    <input data-provide="datepicker" type="text" class="form-control" id="leaseEndDate"
                            placeholder="Lease End Date" ng-model="lease.EndDate">
                 </div><!-- end form group -->
             </div><!-- end column -->
@@ -66,7 +59,7 @@
                 </button>
             </div><!-- end column -->
             <div class="col-sm-4">
-                <button class="btn btn-danger btn-sm pull-right" ui-sref="lease.grid">
+                <button class="btn btn-danger btn-sm pull-right" ui-sref="app.lease.grid">
                     <i class="fa fa-remove fa-fw"></i> Cancel
                 </button>
             </div><!-- end column -->

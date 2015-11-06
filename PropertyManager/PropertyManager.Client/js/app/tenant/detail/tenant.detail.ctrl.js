@@ -1,4 +1,4 @@
-﻿angular.module('app').controller('TenantDetailController', function ($scope, $stateParams, Tenant, $state) {
+angular.module('app').controller('TenantDetailController', function ($scope, $stateParams, Tenant, $state) {
 
     // If an ID was passed to state, then a tenant is being edited: get the tenant to update
     //  otherwise a tenant is being added: create a new tenant
@@ -16,7 +16,7 @@
     $scope.saveTenant = function () {
 
         var successCallback = function () {
-            $state.go('tenant.grid');
+            $state.go('app.tenant.grid');
         };
 
         if ($scope.tenant.TenantId) {

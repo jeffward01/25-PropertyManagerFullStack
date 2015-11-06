@@ -1,4 +1,4 @@
-﻿angular.module('app').controller('LeaseDetailController', function ($scope, $stateParams, Lease, Property, Tenant, $state) {
+angular.module('app').controller('LeaseDetailController', function ($scope, $stateParams, Lease, Property, Tenant, $state) {
 
     $scope.tenants = Tenant.query();
     $scope.properties = Property.query();
@@ -19,7 +19,7 @@
     $scope.saveLease = function () {
 
         var successCallback = function () {
-            $state.go('lease.grid');
+            $state.go('app.lease.grid');
         };
 
         $scope.lease.LeaseType = 2;
@@ -30,5 +30,13 @@
             $scope.lease.$save(successCallback);
         }
     };
+    
+    $('#leaseStartDate').datepicker({
+        format: "mm/dd/yyyy"
+    });
+    
+    $('#leaseEndDate').datepicker({
+        format: "mm/dd/yyyy"
+    });
 
 });

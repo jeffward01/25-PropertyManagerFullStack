@@ -1,7 +1,7 @@
-﻿<div class="panel panel-primary viewPort">
+<div class="panel panel-primary viewPort">
     <div class="panel heading panel-heading clearfix ">
         <i class="fa fa-home"></i>Properties
-        <button class="btn btn-sm btn-success pull-right" ui-sref="property.detail"><i class="fa fa-plus"></i>Add Property</button>
+        <button class="btn btn-sm btn-success pull-right" ui-sref="app.property.detail"><i class="fa fa-plus"></i>Add Property</button>
     </div>
     <div class="panel-body panel-warning">
         <div class="alert alert-warning" ng-hide="properties.length">
@@ -28,7 +28,7 @@
                     <td>{{property.State}}</td>
                     <td>{{property.Zip}}</td>
                     <td>
-                        <a class="btn btn-xs btn-info" ui-sref="property.detail({id:PropertyId})"><i class="fa fa-edit fa-fw"></i></a>
+                        <a class="btn btn-xs btn-info" ui-sref="app.property.detail({id:PropertyId})"><i class="fa fa-edit fa-fw"></i></a>
                         <a class="btn btn-xs btn-danger" ng-click="deleteProperty(property)"><i class="fa fa-times fa-fw"></i></a>
                     </td>
                 </tr>
