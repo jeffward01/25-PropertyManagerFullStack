@@ -3,8 +3,8 @@ angular.module('app').controller('LoginController', function ($scope, $state, au
 
 
 
-    var width = 960,
-        height = 550;
+    var width = 1360,
+        height = 750;
 
     var nodes = d3.range(200).map(function () {
             return {
