@@ -1,4 +1,4 @@
-﻿angular.module('app').controller('PropertyGridController', function ($scope, Property) {
+angular.module('app').controller('PropertyGridController', function ($scope, Property) {
     $scope.properties = Property.query();
 
     $scope.deleteProperty = function (property) {
@@ -9,6 +9,8 @@
                 $scope.properties.splice(index, 1);
             });
         }
+                toastr.error('Property entry was erased!', 'Property Erased!');
+
     }
 
 

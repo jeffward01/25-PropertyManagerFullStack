@@ -24,7 +24,6 @@ angular.module('app').controller('LeaseDetailController', function ($scope, $sta
             return false;
         }
 
-
         var successCallback = function () {
             $state.go('app.lease.grid');
         };
@@ -35,6 +34,8 @@ angular.module('app').controller('LeaseDetailController', function ($scope, $sta
         } else {
             $scope.lease.$save(successCallback);
         }
+        
+        toastr.success('Lease was added!', 'New Lease was Saved!');
     };
 
     $(function() {

@@ -1,4 +1,4 @@
-﻿angular.module('app').controller('TenantGridController', function ($scope, Tenant) {
+angular.module('app').controller('TenantGridController', function ($scope, Tenant) {
 
     $scope.tenants = Tenant.query();
 
@@ -9,6 +9,8 @@
                 $scope.tenants.splice(index, 1);
             });
         }
+                toastr.error('Tenant entry was erased!', 'Tenant Erased!');
+
     }
 
 });

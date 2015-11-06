@@ -1,4 +1,4 @@
-﻿angular.module('app').controller('LeaseGridController', function ($scope, Lease, Property, Tenant) {
+angular.module('app').controller('LeaseGridController', function ($scope, Lease, Property, Tenant) {
 
     $scope.leases = Lease.query();
 
@@ -9,6 +9,7 @@
                 $scope.leases.splice(index, 1);
             });
         }
+        toastr.error('Lease entry was erased!', 'Lease Erased!');
     }
 
    // $scope.Addlease = function()

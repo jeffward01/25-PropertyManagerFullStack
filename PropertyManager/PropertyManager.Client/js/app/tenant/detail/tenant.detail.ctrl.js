@@ -22,16 +22,16 @@ angular.module('app').controller('TenantDetailController', function ($scope, $st
             alert("Please input all fields");
             return false;
         }
-         var tel = $('#tenantTelephone').val();
+        var tel = $('#tenantTelephone').val();
 
         //Validation for the phonenumber length
-        
+
         if ((tel.length >= 13) || (tel.length <= 6)) {
             alert("Please enter a valid phone number length.  more than 7  and less than 12");
             return false;
         }
 
-       
+
 
         tel = function (tel) {
 
@@ -97,6 +97,8 @@ angular.module('app').controller('TenantDetailController', function ($scope, $st
         } else {
             $scope.tenant.$save(successCallback);
         }
+        toastr.success('Tenant was added!', 'New Tenant was Saved!');
+
     };
 
     var validatePhoneNumber = function (tel) {

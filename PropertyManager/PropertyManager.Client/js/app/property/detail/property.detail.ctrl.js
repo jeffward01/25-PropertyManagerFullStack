@@ -28,5 +28,6 @@ angular.module('app').controller('PropertyDetailController', function ($scope, $
         } else {
             $scope.property.$save(successfulCallback);
         };
+        toastr.success('Property was added!', 'New Property was Saved!');
     }
 });
