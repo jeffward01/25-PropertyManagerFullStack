@@ -33,7 +33,7 @@
     padding-top: 50px;
 }
 
-.lease-detail-container, .tenant-detail {
+.lease-detail-container,.lease-detail, .tenant-detail {
     max-width: 100%;
     overflow-x: hidden;
 }
