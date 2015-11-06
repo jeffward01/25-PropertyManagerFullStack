@@ -1,5 +1,5 @@
 
-<div class="container">
+<div class="container lease-detail-container">
     <h4>
         {{lease.LeaseId ? 'Edit' : 'Add'}} Lease
     </h4>
@@ -15,7 +15,7 @@
             </div><!-- end column -->
             <div class="col-sm-3">
                 <div class="form-group">
-                    <label class="control-label" for="leaseTenant">Tenant First Name</label>
+                    <label class="control-label" for="leaseTenant">Tenant Name</label>
                     <select id="leaseTenant" class="form-control" placeholder="First Name"
                             ng-options="tenant.TenantId as tenant.FirstName for tenant in tenants"
                             ng-model="lease.TenantId"></select>
