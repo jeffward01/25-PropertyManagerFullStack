@@ -17,6 +17,8 @@ angular.module('app').controller('LeaseDetailController', function ($scope, $sta
     //  otherwise a lease is being added: save the lease
     // After updating or saving, change state to leases.list
     $scope.saveLease = function () {
+        
+        
 
         var successCallback = function () {
             $state.go('app.lease.grid');

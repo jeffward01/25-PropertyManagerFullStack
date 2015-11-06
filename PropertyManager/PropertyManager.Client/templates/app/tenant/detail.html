@@ -5,14 +5,14 @@
             <div class="col-sm-6 col-md-6 col-lg-6">
                 <div class="form-group">
                     <label class="control-label" for="tenantFirstName">Tenant First Name</label>
-                    <input type="text" class="form-control" id="tenantFirstName"
+                    <input type="text" class="form-control" required id="tenantFirstName"
                            placeholder="Tenant First Name" ng-model="tenant.FirstName">
                 </div><!-- end form group -->
             </div><!-- end column -->
             <div class="col-sm-6 col-md-6 col-lg-6">
                 <div class="form-group">
                     <label class="control-label" for="tenantLastName">Tenant Last Name</label>
-                    <input type="text" class="form-control" id="tenantLastName"
+                    <input type="text"  required class="form-control" id="tenantLastName"
                            placeholder="Tenant Last Name" ng-model="tenant.LastName">
                 </div><!-- end form group -->
             </div><!-- end column -->
@@ -21,7 +21,7 @@
         <div class="row">
             <div class="col-sm-6 col-md-6 col-lg-6">
                 <div class="form-group">
-                    <label class="control-label" for="tenantTelephone">Tenant Telephone</label>
+                    <label class="control-label"  required for="tenantTelephone">Tenant Telephone</label>
                     <input type="text" class="form-control" id="tenantTelephone"
                            placeholder="Telephone" ng-model="tenant.Telephone">
                 </div><!-- end form group -->
@@ -29,7 +29,7 @@
             <div class="col-sm-6 col-md-6 col-lg-6">
                 <div class="form-group">
                     <label class="control-label" for="tenantEmailAddress">Tenant Email Address</label>
-                    <input type="text" class="form-control" id="tenantEmailAddress"
+                    <input type="text" class="form-control" required  id="tenantEmailAddress"
                            placeholder="Email Address" ng-model="tenant.EmailAddress">
                 </div><!-- end form group -->
             </div><!-- end column -->
