@@ -10,7 +10,7 @@ angular.module('app').controller('PropertyDetailController', function ($scope, $
 
     $scope.saveProperty = function () {
         //Validation
-        if (($('#propertyName').val() === "") || $(('#propertyAddress1').val() === "") || ($('#propertyCity').val() === "") || ($('#propertyState').val() === "") || ($('#propertyZip').val() === "")) {
+        if (($('#propertyName').val() === "")  || ($('#propertyCity').val() === "") || ($('#propertyState').val() === "") || ($('#propertyZip').val() === "")) {
             alert("Please enter all required fields");
             return false;
         }
