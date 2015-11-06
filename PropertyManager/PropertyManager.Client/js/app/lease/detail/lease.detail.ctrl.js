@@ -37,12 +37,16 @@ angular.module('app').controller('LeaseDetailController', function ($scope, $sta
         }
     };
 
+    $(function() {
     $('#leaseStartDate').datepicker({
         format: "mm/dd/yyyy"
     });
-
+    });
+    
+    $(function() {
     $('#leaseEndDate').datepicker({
         format: "mm/dd/yyyy"
+    });
     });
 
 });

@@ -37,7 +37,7 @@
         <div class="row dateRow">
 
             <div class="col-md-6">
-                <div class="form-group">
+                <div class="form-group date" data-date-format="dd-mm-yyyy">
                     <label class="control-label" for="leaseStartDate">Lease Start Date</label>
                     <input data-provide="datepicker" type="text" class="form-control" id="leaseStartDate" placeholder="Lease Start Date" ng-model="lease.StartDate">
                 </div>
@@ -45,7 +45,7 @@
             </div>
             <!-- end column -->
             <div class="col-md-6">
-                <div class="form-group">
+                <div class="form-group date"  data-date-format="dd-mm-yyyy">
                     <label class="control-label" for="leaseEndDate">Lease End Date</label>
                     <input data-provide="datepicker" type="text" class="form-control" id="leaseEndDate" placeholder="Lease End Date" ng-model="lease.EndDate">
                 </div>
