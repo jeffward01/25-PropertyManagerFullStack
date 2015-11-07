@@ -3,10 +3,11 @@
     <ng-collision width="1360" height="750"></ng-collision>
 
     <form class="form-signin">
-        <div class="page-header">
+        <div class="page-header row loginHead">
             <h1>Please sign in</h1>
         </div>
-
+<div class="row"> <button class="btn btn-lg btn-warning btn-block" id="CreateAccountBtn" ui-sref="register" ng-click="CreateAccount()">Click here to create an account</button>
+</div>
         <div class="mainLoginContainer">
             <label for="inputEmail" class="sr-only">Username</label>
             <input type="text" id="inputEmail" class="form-control" placeholder="Email address or username" autofocus ng-model="loginData.username" />
@@ -14,9 +15,8 @@
             <label for="inputPassword" class="sr-only">Password</label>
             <input type="password" id="inputPassword" class="form-control" placeholder="Password" ng-model="loginData.password" />
             <div class="buttonContainer">
-                <button class="btn btn-lg btn-success btn-block" ng-click="login()">Sign in</button>
-                          <button class="btn btn-lg btn-warning btn-block" ui-sref="register" ng-click="CreateAccount()">Click here to create an account</button>
-
+                <button class="btn btn-lg btn-success btn-block" id="SignInBtn"ng-click="login()">Sign in</button>
+                         
             </div>
 
         </div>

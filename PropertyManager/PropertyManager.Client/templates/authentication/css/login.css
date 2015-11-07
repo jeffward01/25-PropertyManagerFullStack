@@ -8,11 +8,12 @@
     padding-top: 20px;
     width: 50%;
     margin: 0 auto;
+    text-align: center;
 }
 
 .createAccount {
     
-
+width: auto;
   
   
 }
@@ -30,7 +31,7 @@
     padding-top: 50px;
 }
 
-.lease-detail-container,.lease-detail, .tenant-detail {
+.lease-detail-container,.lease-detail, .tenant-detail, .signin-con {
     max-width: 100%;
     overflow-x: hidden;
 }
@@ -53,13 +54,23 @@
 position: inherit;
 }
 
+#CreateAccountBtn{
+    width: 300px;
+    margin-bottom: 100px;
+    margin-left: 200px;
+    position: absolute;
+    z-index: 1;
+    
+}
+#SignInBtn{
+    margin: 0 auto;
+    text-align: center;
+}
 
 
-
-
-
-
-
+.loginHead{
+    border-bottom: none;
+}
 
 
 
