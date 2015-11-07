@@ -38,6 +38,7 @@
     "angular-local-storage": "~0.2.3",
     "d3": "~3.5.6",
     "countUp.js": "~1.6.0",
-    "odometer": "~0.4.7"
+    "odometer": "~0.4.7",
+    "angular-count-to": "*"
   }
 }
