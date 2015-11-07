@@ -10,6 +10,7 @@ using System.Web.Http;
 
 namespace PropertyManager.Controllers
 {
+    [Authorize]
     public class DashboardController : ApiController
     {
         private PropertyManagerDbContext db = new PropertyManagerDbContext();

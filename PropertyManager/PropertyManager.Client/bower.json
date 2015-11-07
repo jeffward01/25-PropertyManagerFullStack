@@ -35,6 +35,9 @@
     "angular-material": "~0.11.4",
     "angular-animate": "~1.4.7",
     "angular-loading-bar": "~0.8.0",
-    "angular-local-storage": "~0.2.3"
+    "angular-local-storage": "~0.2.3",
+    "d3": "~3.5.6",
+    "countUp.js": "~1.6.0",
+    "odometer": "~0.4.7"
   }
 }
