@@ -1,25 +1,26 @@
-body {
-}
-.titleText{
-   margin-top:-20px;
-}
+body {}
 
-
-.viewPort{
-width:90%
+.titleText {
+    margin-top: -20px;
 }
 
-html, body {
-
-    
+.viewPort {
+    width: 90%
 }
 
-/*DatePicker*/
-.datepickerdemoBasicUsage {
-  /** Demo styles for mdCalendar. */ }
-  .datepickerdemoBasicUsage md-content {
-    padding-bottom: 200px; }
-  .datepickerdemoBasicUsage .validation-messages {
-    font-size: 11px;
-    color: darkred;
-    margin: 10px 0 0 25px; }
+html,
+body {}
+
+
+/*Total Rent*/
+
+.TotalRent {
+    border: 1px solid black;
+    width: 70px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.row1{
+    border-bottom: 2px dotted black;
+}

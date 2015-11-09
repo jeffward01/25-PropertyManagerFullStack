@@ -1,25 +1,120 @@
-<div class="Container">
+<div ng-controller="DashboardController" class="Container">
     <div class="row">
         <div class="page-header">
             Main DashBoard
         </div>
     </div>
-    <div class="row">
-        <div class="col-lg-8 col-md-8">
-            
-            
-            
-            
-            
-            
+    <div class="row row1">
+        <div class="col-lg-3 col-md-3">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Property Count</h3>
+                </div>
+                <div class="panel-body">
+                    {{dashboard.PropertyCount}}
+                </div>
+            </div>
+
         </div>
-        <!-- Right Hand Side Change Counter   /-->
-        <div class="col-lg-4 col-md-4">
-            <div>
-                <div class="odometer" id="odometer"></div>
-                <h1 class="count" count-to="{{countTo}}" value="{{countFrom}}" duration="4"></h1>
-                <br>
-                <countUp></countUp>
+        <div class="col-lg-3 col-md-3">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Lease Count</h3>
+                </div>
+                <div class="panel-body">
+                    {{dashboard.LeaseCount}}
+                </div>
             </div>
         </div>
+
+
+        <div class="col-lg-3 col-md-3">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Tenant Count</h3>
+                </div>
+                <div class="panel-body">
+                    {{dashboard.TenantCount}}
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Hand Side Change Counter   /-->
+        <div class="col-lg-3 col-md-3">
+            <div class="row">
+                <div class="panel panel-success">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Total Monthly Income from Rent</h3>
+                    </div>
+                    <div class="panel-body">
+                        <h1 class="count" count-to="{{countTo}}" value="{{countFrom}}" duration="4"></h1>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 col-md-12">
+            <div class="page-header">
+                <h1>Leases Expiring Soon</h1>
+            </div>
+
+            <div ng-repeat="lease in dashboard.ExpiringLeases" class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Lease Id: {{lease.LeaseId}}</h3>
+                </div>
+                <div class="panel-body">
+
+
+
+                    <h4>Property Information</h4>
+
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Property ID</th>
+                                <th>Property Name</th>
+                                <th>Address</th>
+                                <th>City</th>
+                                <th>State</th>
+                                <th>Zip</th>                      
+                            </tr>
+                        </thead>
+                  
+                        <tbody>
+                            <tr>
+                                <td>{{lease.PropertyId}}</td>
+                                <td>{{lease.Property.Name}}</td>
+                                 <td>{{lease.Property.Address1}} {{lease.Property.Address2}}</td>
+                                <td>{{lease.Property.City}}</td>
+                                <td>{{lease.Property.State}}</td>
+                                <td>{{lease.Property.Zip}}</td>                           
+                            </tr>
+                          
+                        </tbody>
+                    </table>
+
+
+
+                </div>
+            </div>
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
     </div>
