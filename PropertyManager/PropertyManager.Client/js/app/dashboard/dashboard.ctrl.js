@@ -1,10 +1,17 @@
-angular.module('app').controller('LoginController', function ($scope, $state, authService) {
+angular.module('app').controller('DashboardController', function ($scope, $state, authService) {
 
 
-    //Need to convert to directive
-    $(document).ready(function () {
-        setTimeout(function () {
-            odometer.innerHTML = 456;
-        }, 1000);
-    })();
+
+    //Rent Income Count
+    $scope.countTo = 10000;
+    $scope.countFrom = 0;
+
+    $scope.reCount = function () {
+        $scope.countFrom = Math.ceil(Math.random() * 300);
+        $scope.countTo = Math.ceil(Math.random() * 7000) -      Math.ceil(Math.random() * 600);
+    };
+
+    
+    
+    
 });

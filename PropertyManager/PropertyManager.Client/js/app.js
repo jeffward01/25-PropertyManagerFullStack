@@ -1,4 +1,4 @@
-angular.module('app', ['ui.router', 'ngResource', 'ngRoute', 'angular-loading-bar', 'LocalStorageModule']).config(function ($stateProvider, $httpProvider, $urlRouterProvider) {
+angular.module('app', ['ui.router', 'ngResource', 'ngRoute', 'angular-loading-bar', 'LocalStorageModule', 'countTo']).config(function ($stateProvider, $httpProvider, $urlRouterProvider) {
     $httpProvider.interceptors.push('authInterceptorService');
     
     $urlRouterProvider.otherwise('/login');
@@ -9,7 +9,7 @@ angular.module('app', ['ui.router', 'ngResource', 'ngRoute', 'angular-loading-ba
        
         
         .state('app', {url: '/app', templateUrl: '/templates/app/app.html', authenticate: true, controller: 'AppController'})
-            .state('app.dashboard', {url: '/dashboard', templateUrl: '/templates/app/dashboard/dashboard.html', authenticate: true})
+            .state('app.dashboard', {url: '/dashboard', templateUrl: '/templates/app/dashboard/dashboard.html', authenticate: true, controller: 'DashboardController'})
     
        //If state == property
         .state('app.property', { abstract: true, url: '/property', template: '<ui-view />', authenticate: true })
