@@ -67,37 +67,105 @@
                 </div>
                 <div class="panel-body">
 
+                    <div class="well">
+                        <h4>Lease Informaation</h4>
+                        
+                               <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Start Date</th>
+                                    <th>End Date</th>
+                                    <th>Rent Amount</th>
+                                  
+
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>{{lease.StartDate | date}}</td>
+                                    <td>{{lease.EndDate | date}}</td>
+                                    <td>{{lease.Rent | currency}}</td>
+                              
+
+                                </tr>
+
+                            </tbody>
+                        </table>
+                                     
+                        <h4>Lease Length</h4>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
+                           
+                            </div>
+                        </div>
+
+                    </div>
 
 
-                    <h4>Property Information</h4>
-
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th>Property ID</th>
-                                <th>Property Name</th>
-                                <th>Address</th>
-                                <th>City</th>
-                                <th>State</th>
-                                <th>Zip</th>                      
-                            </tr>
-                        </thead>
-                  
-                        <tbody>
-                            <tr>
-                                <td>{{lease.PropertyId}}</td>
-                                <td>{{lease.Property.Name}}</td>
-                                 <td>{{lease.Property.Address1}} {{lease.Property.Address2}}</td>
-                                <td>{{lease.Property.City}}</td>
-                                <td>{{lease.Property.State}}</td>
-                                <td>{{lease.Property.Zip}}</td>                           
-                            </tr>
-                          
-                        </tbody>
-                    </table>
 
 
 
+                    <div class="well">
+                        <h4>Tenant Information</h4>
+
+
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Telephone</th>
+                                    <th>Email Address</th>
+
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>{{lease.Tenant.FirstName}}</td>
+                                    <td>{{lease.Tenant.LastName}}</td>
+                                    <td>{{lease.Tenant.Telephone}}</td>
+                                    <td>{{lease.Tenant.EmailAddress}}</td>
+
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+
+
+                    <div class="well">
+                        <h4>Property Information</h4>
+
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Property ID</th>
+                                    <th>Property Name</th>
+                                    <th>Address</th>
+                                    <th>City</th>
+                                    <th>State</th>
+                                    <th>Zip</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>{{lease.PropertyId}}</td>
+                                    <td>{{lease.Property.Name}}</td>
+                                    <td>{{lease.Property.Address1}} {{lease.Property.Address2}}</td>
+                                    <td>{{lease.Property.City}}</td>
+                                    <td>{{lease.Property.State}}</td>
+                                    <td>{{lease.Property.Zip}}</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+
+                    </div>
                 </div>
             </div>
 
