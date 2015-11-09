@@ -1,4 +1,4 @@
-﻿body {
+body {
 }
 .titleText{
    margin-top:-20px;
@@ -13,3 +13,13 @@ html, body {
 
     
 }
+
+/*DatePicker*/
+.datepickerdemoBasicUsage {
+  /** Demo styles for mdCalendar. */ }
+  .datepickerdemoBasicUsage md-content {
+    padding-bottom: 200px; }
+  .datepickerdemoBasicUsage .validation-messages {
+    font-size: 11px;
+    color: darkred;
+    margin: 10px 0 0 25px; }

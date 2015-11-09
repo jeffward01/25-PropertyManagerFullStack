@@ -1,4 +1,4 @@
-angular.module('app', ['ui.router', 'ngResource', 'ngRoute', 'angular-loading-bar', 'LocalStorageModule', 'countTo']).config(function ($stateProvider, $httpProvider, $urlRouterProvider) {
+angular.module('app', ['ui.router', 'ngResource', 'ngRoute', 'angular-loading-bar', 'LocalStorageModule', 'countTo', 'ngMaterial']).config(function ($stateProvider, $httpProvider, $urlRouterProvider) {
     $httpProvider.interceptors.push('authInterceptorService');
     
     $urlRouterProvider.otherwise('/login');
