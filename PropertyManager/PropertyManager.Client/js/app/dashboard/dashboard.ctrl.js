@@ -35,4 +35,15 @@ angular.module('app').controller('DashboardController', function ($scope, $state
             // show sad faces :(
         }
     );
+    
+    //Need to calulcate percetange based on Date
+    function getPercentage(){
+
+        
+
+  
+        
+        
+        
+    }
 });
