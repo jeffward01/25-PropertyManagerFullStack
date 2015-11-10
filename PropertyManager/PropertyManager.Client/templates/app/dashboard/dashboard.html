@@ -68,7 +68,10 @@
                 <div class="panel-body">
 
                     <div class="well">
-                        <h4>Lease Informaation</h4>
+                        <h4>Lease Information</h4>
+                        
+<!--                       Erase Late -->
+                        <h4> Temp: {{lease.PercentageOfLeaseCompleted}}</h4>
                         
                                <table class="table table-striped">
                             <thead>
@@ -95,8 +98,8 @@
                                      
                         <h4>Lease Length</h4>
                         <div class="progress">
-                            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="{{getPercentage()}}" aria-valuemin="0" aria-valuemax="100" style="width: {{getPercentage()}}">
-                                <span class="sr-only">{{getPercentage()}}% Complete</span>
+                            <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="{{lease.PercentageOfLeaseCompleted}}" aria-valuemin="0" aria-valuemax="100" style="width: {{lease.PercentageOfLeaseCompleted}}">
+                                <span class="sr-only">{{lease.PercentageOfLeaseCompleted}}% Complete</span>
                             </div>
                         </div>
 

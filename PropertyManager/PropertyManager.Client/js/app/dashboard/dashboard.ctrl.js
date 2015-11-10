@@ -15,6 +15,7 @@ angular.module('app').controller('DashboardController', function ($scope, $state
             // bind data now!
 
             $scope.dashboard = data;
+            
 
             //Rent Income Count
             $scope.countTo = $scope.dashboard.TotalMonthlyIncome;
@@ -24,6 +25,9 @@ angular.module('app').controller('DashboardController', function ($scope, $state
                 $scope.countFrom = Math.ceil(Math.random() * 300);
                 $scope.countTo = Math.ceil(Math.random() * 7000) - Math.ceil(Math.random() * 600);
             };
+            
+            //Date Percentage
+            $scope.PercentageLeft = $scope.dashboard.PercentageOfLeaseCompleted;
 
 
 

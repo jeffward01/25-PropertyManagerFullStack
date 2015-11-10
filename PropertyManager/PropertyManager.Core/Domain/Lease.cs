@@ -24,6 +24,28 @@ namespace PropertyManager.Core.Domain
         public virtual Tenant Tenant { get; set; }
 
 
+        //Calculate % of time left on Lease
+        public double PercentageOfLeaseCompleted
+        {
+            get
+            {
+                DateTime StartTime = StartDate;
+                DateTime EndTime = (DateTime)EndDate;
+                TimeSpan duration = EndTime - StartTime;
+
+                DateTime NowTime = DateTime.Now;
+
+                TimeSpan elapsedTime = NowTime - StartTime;
+
+                double elapsedSeconds = elapsedTime.TotalSeconds;
+                double durationSeconds = duration.TotalSeconds;
+
+                double percentage = elapsedSeconds / durationSeconds * 100;
+
+                return percentage;
+
+            }
+        }
 
         public void Update(LeaseModel lease)
         {
