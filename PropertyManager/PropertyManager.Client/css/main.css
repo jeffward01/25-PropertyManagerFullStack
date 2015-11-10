@@ -24,3 +24,7 @@ body {}
 .row1{
     border-bottom: 2px dotted black;
 }
+
+.progress{
+    border: 1px solid black;
+}
